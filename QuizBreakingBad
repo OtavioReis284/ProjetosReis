@@ -1,0 +1,124 @@
+// Avaliação de Quiz por Otávio Reis
+for (int jogada = 0; jogada < 10; jogada++)
+{
+    Console.WriteLine("QUIZ DO BREAKING BAD");
+    Console.WriteLine("PRESSIONE <Enter> PARA COMEÇAR");
+
+    while (Console.ReadKey().Key != ConsoleKey.Enter)
+    {
+        Console.WriteLine();
+        Console.Write("Pressione enter! Pressione enter! Pressione enter!");
+    }
+
+    Console.WriteLine("Pergunta Número 1:");
+    Console.WriteLine("Qual o nome do(a) protagonista de Breaking Bad?");
+    Console.WriteLine("<1> Crise de meia idade");
+    Console.WriteLine("<2> Walter White");
+    Console.WriteLine("<3> Ivete Semgalo");
+    int resposta1 = Convert.ToInt32(Console.ReadLine());
+
+    int numeroAcertos = 0;
+    int numeroErros = 0;
+    if (resposta1 == 2)
+    {
+        Console.WriteLine("Boa!");
+        numeroAcertos++;
+    }
+    else
+    {
+        Console.WriteLine("Você errou!");
+        numeroErros++;
+    }
+
+    Console.WriteLine("Pergunta Número 2:");
+    Console.WriteLine("Quem é Mike Ehrmantraut?");
+    Console.WriteLine("<1> Juíz de futebol que já apitou em mais de 5 partidas, sendo uma delas um bom e velho grenal");
+    Console.WriteLine("<2> Namorado de Jesse Pinkman");
+    Console.WriteLine("<3> O braço direito e homem mais fiel de Gus Fring");
+    int resposta2 = Convert.ToInt32(Console.ReadLine());
+
+    if (resposta2 == 3)
+    {
+        Console.WriteLine("So, here's what you gonna do...");
+        numeroAcertos++;
+    }
+    else
+    {
+        Console.WriteLine("Você errou!");
+        numeroErros++;
+    }
+
+    Console.WriteLine("Pergunta Número 3:");
+    Console.WriteLine("Onde Walter White tem câncer?");
+    Console.WriteLine("<1> Testículos");
+    Console.WriteLine("<2> Pulmões");
+    Console.WriteLine("<3> Calcanhar");
+    int resposta3 = Convert.ToInt32(Console.ReadLine());
+
+    if (resposta3 == 2)
+    {
+        Console.WriteLine("Parabéns!");
+        numeroAcertos++;
+    }
+    else
+    {
+        Console.WriteLine("Você errou!");
+        numeroErros++;
+    }
+
+    Console.WriteLine("Pergunta Número 4:");
+    Console.WriteLine("Onde a família do protagonista habita?");
+    Console.WriteLine("<1> Albuquerque, Novo México");
+    Console.WriteLine("<2> Quebrangulo, Alagoas");
+    Console.WriteLine("<3> Santa Rita do Passo Quatro, São Paulo");
+    int resposta4 = Convert.ToInt32(Console.ReadLine());
+
+    if (resposta4 == 1)
+    {
+        Console.WriteLine("Sensacional!");
+        numeroAcertos++;
+    }
+    else
+    {
+        Console.WriteLine("Você errou!");
+        numeroErros++;
+    }
+
+    Console.WriteLine("Pergunta Número 5:");
+    Console.WriteLine("Qual o nome do episódio mais prestigiado da série, também tendo nota máxima no IMDb?");
+    Console.WriteLine("<1> Ananias");
+    Console.WriteLine("<2> As trapalhadas finais de um professor muito serelepe");
+    Console.WriteLine("<3> Ozymandias");
+    int resposta5 = Convert.ToInt32(Console.ReadLine());
+
+    if (resposta5 == 3)
+    {
+        Console.WriteLine("Ozymandias possui nota 10 no IMDb");
+        numeroAcertos++;
+    }
+    else
+    {
+        Console.WriteLine("Você errou!");
+        numeroErros++;
+    }
+
+    Console.Clear();
+    Console.WriteLine("VOCÊ CONCLUIU O QUIZ.");
+    Console.WriteLine("SEUS RESULTADOS:");
+    Console.WriteLine("Acertou:" + numeroAcertos);
+    Console.WriteLine("Errou:" + numeroErros);
+    Console.WriteLine();
+
+    Console.WriteLine("PARA JOGAR NOVAMENTE, DIGITE QUALQUER NÚMERO");
+    Console.WriteLine("PARA FECHAR, DIGITE <9>");
+    int final = Convert.ToInt32(Console.ReadLine());
+
+    if (final == 9)
+    {
+        break;
+    }
+    else
+    {
+        Console.Clear();
+    }
+}
