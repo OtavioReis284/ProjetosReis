@@ -1,5 +1,5 @@
 // Avaliação de Quiz por Otávio Reis e Ana Carolina
-for (int jogada = 0; jogada < 10; jogada++)
+for (int jogada = 0; jogada < 50; jogada++)
 {
     Console.WriteLine("QUIZ DO BREAKING BAD");
     Console.WriteLine("PRESSIONE <Enter> PARA COMEÇAR");
