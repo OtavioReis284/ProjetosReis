@@ -1,5 +1,5 @@
 começo:
-
+//Matheus Lopes também está em nosso grupo.
 Console.WriteLine("LÍDER SUBSTITUTO");
 Console.WriteLine("Pressione <Enter> para começar");
 
