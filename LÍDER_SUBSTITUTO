@@ -1,298 +1,313 @@
-começo:
-//Matheus Lopes também está em nosso grupo.
-Console.WriteLine("LÍDER SUBSTITUTO");
-Console.WriteLine("Pressione <Enter> para começar");
+ static void Main(string[] args)
+        {
+            int jogando = 1;
 
-while (Console.ReadKey().Key != ConsoleKey.Enter)
-{
-    Console.WriteLine();
-    Console.Write("Pressione <Enter> para começar o jogo...");
-}
-//Grupo usado para a tela inicial do jogo, com função de pressionar Enter para começar utilizando o comando while
+            while (jogando == 1)
+            {
+                quiz();
+            }
 
-Console.Clear();
-Console.WriteLine("INTRODUÇÃO:");
-Console.WriteLine("Em um futuro pós apocalíptico, uma pequena vila se formou...");
-Console.WriteLine("Recentemente, exploradores da vila encontraram um novo local possivelmente melhor para se habitar...");
-Console.WriteLine("Com isso, o Líder da vila formou um pequeno esquadrão e foi reconhecer o lugar, ausentando-se por 7 dias.");
-Console.WriteLine();
-Console.WriteLine("Pressione <Enter> para continuar...");
+            Environment.Exit(0);
+        }
 
-while (Console.ReadKey().Key != ConsoleKey.Enter)
-{
-    Console.WriteLine();
-    Console.Write("Pressione <Enter> para continuar o jogo...");
-}
+           static int quiz()
+        {
+            //Matheus Lopes também está em nosso grupo.
+            Console.WriteLine("LÍDER SUBSTITUTO");
+            Console.WriteLine("Pressione <Enter> para começar");
 
-Console.Clear();
-Console.WriteLine("Durante estes 7 dias, o Líder encarregou VOCÊ, seu(sua) filho(a) para cuidar da vila até ele retornar.");
-Console.WriteLine("Seu objetivo é simples: Manter a vila em ordem até que seu Pai retorne.");
-Console.WriteLine("A cada dia, você terá uma decisão para fazer, então tome cuidado...");
-Console.WriteLine("Boa sorte...");
-Console.WriteLine();
-Console.WriteLine("Pressione <Enter> para iniciar");
+            while (Console.ReadKey().Key != ConsoleKey.Enter)
+            {
+                Console.WriteLine();
+                Console.Write("Pressione <Enter> para começar o jogo...");
+            }
+            //Grupo usado para a tela inicial do jogo, com função de pressionar Enter para começar utilizando o comando while
 
-while (Console.ReadKey().Key != ConsoleKey.Enter)
-{
-    Console.WriteLine();
-    Console.Write("Pressione <Enter> para continuar o jogo...");
-}
-//Os códigos acima foi utilizado o comando while para pausar os textos, deixando a tela menos poluída e dando tempo para o jogador ler as informações.
+            Console.Clear();
+            Console.WriteLine("INTRODUÇÃO:");
+            Console.WriteLine("Em um futuro pós apocalíptico, uma pequena vila se formou...");
+            Console.WriteLine("Recentemente, exploradores da vila encontraram um novo local possivelmente melhor para se habitar...");
+            Console.WriteLine("Com isso, o Líder da vila formou um pequeno esquadrão e foi reconhecer o lugar, ausentando-se por 7 dias.");
+            Console.WriteLine();
+            Console.WriteLine("Pressione <Enter> para continuar...");
 
-int Recursos = 2000;
-int Habitantes = 100;
-int Revolta = 0;
-//No jogo, as duas principais variáveis utilizadas são as de Recursos e Habitantes, as duas principais coisas que o jogador deve gerenciar durante o jogo.
-//A variável de Revolta, é apenas um possível evento que pode vir acontecer dependendo das decisões que o jogador fez.
+            while (Console.ReadKey().Key != ConsoleKey.Enter)
+            {
+                Console.WriteLine();
+                Console.Write("Pressione <Enter> para continuar o jogo...");
+            }
 
-Console.Clear();
-Console.WriteLine("PRIMEIRO DIA");
-Console.WriteLine("Recursos:" + Recursos);
-Console.WriteLine("Habitantes:" + Habitantes);
-Console.WriteLine();
-Console.WriteLine("Amanhece, um habitante chamado Kleiton aparece dizendo que com seu telescópio, acredita que encontrou uma cidade arruinada aparentemente ainda não explorada.");
-Console.WriteLine("Kleiton pede para você dar alguns recursos para ele ir até lá e retornar em 3 dias.");
-Console.WriteLine();
-Console.WriteLine("O que você faz?");
-Console.WriteLine("Digite <1> para dar os recursos");
-Console.WriteLine("Digite <2> para não dar os recursos");
-int dia1 = Convert.ToInt32(Console.ReadLine());
-int Kleiton=0;
-//A variável Kleiton foi criada para caso o jogador opte por fornecer recursos ao personagem, sua interação possa ser cumprida mais para frente no jogo
+            Console.Clear();
+            Console.WriteLine("Durante estes 7 dias, o Líder encarregou VOCÊ, seu(sua) filho(a) para cuidar da vila até ele retornar.");
+            Console.WriteLine("Seu objetivo é simples: Manter a vila em ordem até que seu Pai retorne.");
+            Console.WriteLine("A cada dia, você terá uma decisão para fazer, então tome cuidado...");
+            Console.WriteLine("Boa sorte...");
+            Console.WriteLine();
+            Console.WriteLine("Pressione <Enter> para iniciar");
 
-if(dia1 == 1)
-{
-    Console.Clear();
-    Recursos -=350;
-    Kleiton++;
-}
-else
-{
-    Console.Clear();
-    //nada acontece
-}
-//Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
-//Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
+            while (Console.ReadKey().Key != ConsoleKey.Enter)
+            {
+                Console.WriteLine();
+                Console.Write("Pressione <Enter> para continuar o jogo...");
+            }
+            //Os códigos acima foi utilizado o comando while para pausar os textos, deixando a tela menos poluída e dando tempo para o jogador ler as informações.
 
-Console.WriteLine("SEGUNDO DIA");
-Console.WriteLine("Recursos:" + Recursos);
-Console.WriteLine("Habitantes:" + Habitantes);
-Console.WriteLine();
-Console.WriteLine("Amanhece, uma cultista chamada Vanedette, comenta ter encontrado água potável abaixo de sua residência.");
-Console.WriteLine("Ela diz para as pessoas virem beber sua água.");
-Console.WriteLine();
-Console.WriteLine("O que você faz?");
-Console.WriteLine("Digite <1> para autorizar o consumo da água encontrada");
-Console.WriteLine("Digite <2> para não autorizar o consumo da água encontrada");
-int dia2 = Convert.ToInt32(Console.ReadLine());
+            int Recursos = 2000;
+            int Habitantes = 100;
+            int Revolta = 0;
+            //No jogo, as duas principais variáveis utilizadas são as de Recursos e Habitantes, as duas principais coisas que o jogador deve gerenciar durante o jogo.
+            //A variável de Revolta, é apenas um possível evento que pode vir acontecer dependendo das decisões que o jogador fez.
 
-if (dia2 == 1)
-{
-    Console.Clear();
-    Console.WriteLine("Você autoriza o consumo de água, no entanto, ela não era potável...");
-    Habitantes -= 8;
-}
-else
-{
-    Console.Clear();
-    Console.WriteLine("É descoberto que a água não era potável, Vanedette faleceu durante a noite por infecção.");
-    Habitantes -= 1;
-}
-//Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
-//Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
+            Console.Clear();
+            Console.WriteLine("PRIMEIRO DIA");
+            Console.WriteLine("Recursos:" + Recursos);
+            Console.WriteLine("Habitantes:" + Habitantes);
+            Console.WriteLine();
+            Console.WriteLine("Amanhece, um habitante chamado Kleiton aparece dizendo que com seu telescópio, acredita que encontrou uma cidade arruinada aparentemente ainda não explorada.");
+            Console.WriteLine("Kleiton pede para você dar alguns recursos para ele ir até lá e retornar em 3 dias.");
+            Console.WriteLine();
+            Console.WriteLine("O que você faz?");
+            Console.WriteLine("Digite <1> para dar os recursos");
+            Console.WriteLine("Digite <2> para não dar os recursos");
+            int dia1 = Convert.ToInt32(Console.ReadLine());
+            int Kleiton = 0;
+            //A variável Kleiton foi criada para caso o jogador opte por fornecer recursos ao personagem, sua interação possa ser cumprida mais para frente no jogo
 
-Console.WriteLine("TERCEIRO DIA");
-Console.WriteLine("Recursos:" + Recursos);
-Console.WriteLine("Habitantes:" + Habitantes);
-Console.WriteLine();
-if (Kleiton == 1)
-{
-    Console.WriteLine("Kleiton não retornou de sua viagem...");
-    Habitantes -= 1;
-} //Aqui, se o jogador no DIA UM optou por fornecer recursos para Kleiton, o evento acontece, mostrando que ele não retornou...
-Console.WriteLine("Amanhece, uma forte tempestade de Areia se aproxima da vila...");
-Console.WriteLine("O Engenheiro da vila, Arlindo, sugere que você gaste alguns dos Recursos da vila para proteger as pessoas.");
-Console.WriteLine();
-Console.WriteLine("O que você faz?");
-Console.WriteLine("Digite <1> para autorizar a construção de defesas");
-Console.WriteLine("Digite <2> para mandar os habitantes cavarem buracos e torcerem para a sorte estar do lado deles");
-int dia3 = Convert.ToInt32(Console.ReadLine());
+            if (dia1 == 1)
+            {
+                Console.Clear();
+                Recursos -= 350;
+                Kleiton++;
+            }
+            else
+            {
+                Console.Clear();
+                //nada acontece
+            }
+            //Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
+            //Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
 
-if (dia3 == 2)
-{
-    Console.Clear();
-    Console.WriteLine("A tempestade chega na vila... As pessoas cavaram buracos e se esconderam, mas alguns não conseguiram se proteger...");
-    Console.WriteLine("Alguns habitantes não gostaram da sua última decisão...");
-    Habitantes -= 21;
-    Revolta++;
-} //Aqui a variável de Revolta ganha seu ponto devido a uma decisão ruim que o jogador possa ter feito...
-else
-{
-    Console.Clear();
-    Console.WriteLine("A tempestade chega na vila... As pessoas conseguiram se manter seguras...");
-    Recursos -= 275;
-}
-//Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
-//Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
+            Console.WriteLine("SEGUNDO DIA");
+            Console.WriteLine("Recursos:" + Recursos);
+            Console.WriteLine("Habitantes:" + Habitantes);
+            Console.WriteLine();
+            Console.WriteLine("Amanhece, uma cultista chamada Vanedette, comenta ter encontrado água potável abaixo de sua residência.");
+            Console.WriteLine("Ela diz para as pessoas virem beber sua água.");
+            Console.WriteLine();
+            Console.WriteLine("O que você faz?");
+            Console.WriteLine("Digite <1> para autorizar o consumo da água encontrada");
+            Console.WriteLine("Digite <2> para não autorizar o consumo da água encontrada");
+            int dia2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("QUARTO DIA");
-Console.WriteLine("Recursos:" + Recursos);
-Console.WriteLine("Habitantes:" + Habitantes);
-Console.WriteLine();
-Console.WriteLine("Amanhece, um dos exploradores, Edmundo, diz que encontrou uma possível caverna no lado de fora da vila.");
-Console.WriteLine("Ele pede por Recursos para fazer uma bomba e ver o que há na caverna.");
-Console.WriteLine();
-Console.WriteLine("O que você faz?");
-Console.WriteLine("Digite <1> para fornecer os Recursos para fazer uma bomba");
-Console.WriteLine("Digite <2> para negar o pedido");
-int dia4 = Convert.ToInt32(Console.ReadLine());
+            if (dia2 == 1)
+            {
+                Console.Clear();
+                Console.WriteLine("Você autoriza o consumo de água, no entanto, ela não era potável...");
+                Habitantes -= 8;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("É descoberto que a água não era potável, Vanedette faleceu durante a noite por infecção.");
+                Habitantes -= 1;
+            }
+            //Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
+            //Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
 
-if (dia4 == 1)
-{
-    Console.Clear();
-    Console.WriteLine("Edmundo explode a entrada da caverna, revelando ter diversos Recursos de um grupo antigo de sobreviventes");
-    Recursos += 480;
-}
-else
-{
-    Console.Clear();
-    //nada acontece
-}
-//Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
-//Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
+            Console.WriteLine("TERCEIRO DIA");
+            Console.WriteLine("Recursos:" + Recursos);
+            Console.WriteLine("Habitantes:" + Habitantes);
+            Console.WriteLine();
+            if (Kleiton == 1)
+            {
+                Console.WriteLine("Kleiton não retornou de sua viagem...");
+                Habitantes -= 1;
+            } //Aqui, se o jogador no DIA UM optou por fornecer recursos para Kleiton, o evento acontece, mostrando que ele não retornou...
+            Console.WriteLine("Amanhece, uma forte tempestade de Areia se aproxima da vila...");
+            Console.WriteLine("O Engenheiro da vila, Arlindo, sugere que você gaste alguns dos Recursos da vila para proteger as pessoas.");
+            Console.WriteLine();
+            Console.WriteLine("O que você faz?");
+            Console.WriteLine("Digite <1> para autorizar a construção de defesas");
+            Console.WriteLine("Digite <2> para mandar os habitantes cavarem buracos e torcerem para a sorte estar do lado deles");
+            int dia3 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("QUINTO DIA");
-Console.WriteLine("Recursos:" + Recursos);
-Console.WriteLine("Habitantes:" + Habitantes);
-Console.WriteLine();
-Console.WriteLine("Amanhece, a guardiã da Vila, Monique, diz ter avistado saqueadores ao Leste da vila.");
-Console.WriteLine("Ela sugere gastar alguns Recursos para armar defesas e garantir proteção dos habitantes.");
-Console.WriteLine();
-Console.WriteLine("O que você faz?");
-Console.WriteLine("Digite <1> para fornecer os Recursos e formar defesas");
-Console.WriteLine("Digite <2> para apenas mandar o uso de alguns homens da vila para lutar contra os saqueadores");
-int dia5 = Convert.ToInt32(Console.ReadLine());
+            if (dia3 == 2)
+            {
+                Console.Clear();
+                Console.WriteLine("A tempestade chega na vila... As pessoas cavaram buracos e se esconderam, mas alguns não conseguiram se proteger...");
+                Console.WriteLine("Alguns habitantes não gostaram da sua última decisão...");
+                Habitantes -= 21;
+                Revolta++;
+            } //Aqui a variável de Revolta ganha seu ponto devido a uma decisão ruim que o jogador possa ter feito...
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("A tempestade chega na vila... As pessoas conseguiram se manter seguras...");
+                Recursos -= 275;
+            }
+            //Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
+            //Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
 
-if (dia5 == 1)
-{
-    Console.Clear();
-    Console.WriteLine("Monique prepara algumas defesas ao redor dos muros da Vila");
-    Console.WriteLine("Poucos morrem defendendo a vila, mas nenhum Recurso foi roubado");
-    Recursos -= 300;
-    Habitantes -= 3;
-}
-else
-{
-    Console.Clear();
-    Console.WriteLine("Os Saqueadores conseguem entrar na vila, levando diversos recursos e alguns habitantes morreram...");
-    Console.WriteLine("Alguns habitantes não gostaram da sua última decisão...");
-    Recursos -= 575;
-    Habitantes -= 15;
-    Revolta++;
-}
-//Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
-//Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
+            Console.WriteLine("QUARTO DIA");
+            Console.WriteLine("Recursos:" + Recursos);
+            Console.WriteLine("Habitantes:" + Habitantes);
+            Console.WriteLine();
+            Console.WriteLine("Amanhece, um dos exploradores, Edmundo, diz que encontrou uma possível caverna no lado de fora da vila.");
+            Console.WriteLine("Ele pede por Recursos para fazer uma bomba e ver o que há na caverna.");
+            Console.WriteLine();
+            Console.WriteLine("O que você faz?");
+            Console.WriteLine("Digite <1> para fornecer os Recursos para fazer uma bomba");
+            Console.WriteLine("Digite <2> para negar o pedido");
+            int dia4 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("SEXTO DIA");
-Console.WriteLine("Recursos:" + Recursos);
-Console.WriteLine("Habitantes:" + Habitantes);
-Console.WriteLine();
-Console.WriteLine("Amanhece, o veterinário da vila, Paulo, descobre que os porcos estão agindo estranho.");
-Console.WriteLine("Ele assume que seja uma doença nos porcos, sugerindo que todos sejam exterminados. ");
-Console.WriteLine();
-Console.WriteLine("O que você faz?");
-Console.WriteLine("Digite <1> para exterminar os porcos");
-Console.WriteLine("Digite <2> para recusar a sugestão e manter os porcos da forma como estão");
-int dia6 = Convert.ToInt32(Console.ReadLine());
+            if (dia4 == 1)
+            {
+                Console.Clear();
+                Console.WriteLine("Edmundo explode a entrada da caverna, revelando ter diversos Recursos de um grupo antigo de sobreviventes");
+                Recursos += 480;
+            }
+            else
+            {
+                Console.Clear();
+                //nada acontece
+            }
+            //Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
+            //Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
 
-if (dia6 == 1)
-{
-    Console.Clear();
-    Console.WriteLine("Você manda exterminar todos os porcos, restando apenas galinhas agora...");
-    Console.WriteLine("Alguns habitantes não gostaram da sua última decisão...");
-    Recursos -= 12;
-    Revolta++;
-}
-else
-{
-    Console.Clear();
-    Console.WriteLine("Os porcos estavam doentes, muitos que comeram sua carne adoeceram e morreram...");
-    Habitantes -= 14;
-}
-//Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
-//Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
+            Console.WriteLine("QUINTO DIA");
+            Console.WriteLine("Recursos:" + Recursos);
+            Console.WriteLine("Habitantes:" + Habitantes);
+            Console.WriteLine();
+            Console.WriteLine("Amanhece, a guardiã da Vila, Monique, diz ter avistado saqueadores ao Leste da vila.");
+            Console.WriteLine("Ela sugere gastar alguns Recursos para armar defesas e garantir proteção dos habitantes.");
+            Console.WriteLine();
+            Console.WriteLine("O que você faz?");
+            Console.WriteLine("Digite <1> para fornecer os Recursos e formar defesas");
+            Console.WriteLine("Digite <2> para apenas mandar o uso de alguns homens da vila para lutar contra os saqueadores");
+            int dia5 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("SÉTIMO DIA");
-Console.WriteLine("Recursos:" + Recursos);
-Console.WriteLine("Habitantes:" + Habitantes);
-Console.WriteLine();
-if (Revolta == 3) //Aqui, se o jogador fez 3 escolhas que tenham desagradado os Habitantes, este evento acontecerá
-{
-    Console.WriteLine("Durante a noite, um grupo de Habitantes fugiu com recursos...");
-    Console.WriteLine();
-    Habitantes -= 10;
-    Recursos -= 400;
-}
-Console.WriteLine("Amanhece, a inventora Florinda da vila, diz ter encontrado peças de veículo no lado de fora.");
-Console.WriteLine("Florinda pede para que você doe recursos para ela construir um veículo de transporte.");
-Console.WriteLine();
-Console.WriteLine("O que você faz?");
-Console.WriteLine("Digite <1> para dar os Recursos e deixá-la construir um veículo");
-Console.WriteLine("Digite <2> para recusar o pedido");
-int dia7 = Convert.ToInt32(Console.ReadLine());
+            if (dia5 == 1)
+            {
+                Console.Clear();
+                Console.WriteLine("Monique prepara algumas defesas ao redor dos muros da Vila");
+                Console.WriteLine("Poucos morrem defendendo a vila, mas nenhum Recurso foi roubado");
+                Recursos -= 300;
+                Habitantes -= 3;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Os Saqueadores conseguem entrar na vila, levando diversos recursos e alguns habitantes morreram...");
+                Console.WriteLine("Alguns habitantes não gostaram da sua última decisão...");
+                Recursos -= 575;
+                Habitantes -= 15;
+                Revolta++;
+            }
+            //Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
+            //Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
 
-if (dia7 == 1)
-{
-    Console.Clear();
-    Console.WriteLine("Florinda consseguiu construir um veículo, porém, quando foi testá-lo, ele explodiu...");
-    Recursos -= 100;
-    Habitantes -= 1;
-}
-else
-{
-    Console.Clear();
-    //nada acontece
-}
-//Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
-//Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
+            Console.WriteLine("SEXTO DIA");
+            Console.WriteLine("Recursos:" + Recursos);
+            Console.WriteLine("Habitantes:" + Habitantes);
+            Console.WriteLine();
+            Console.WriteLine("Amanhece, o veterinário da vila, Paulo, descobre que os porcos estão agindo estranho.");
+            Console.WriteLine("Ele assume que seja uma doença nos porcos, sugerindo que todos sejam exterminados. ");
+            Console.WriteLine();
+            Console.WriteLine("O que você faz?");
+            Console.WriteLine("Digite <1> para exterminar os porcos");
+            Console.WriteLine("Digite <2> para recusar a sugestão e manter os porcos da forma como estão");
+            int dia6 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("SEU PAI RETORNOU...");
-if (Recursos < 700) 
-{
-    Console.WriteLine("Seu pai fica enfurecido com o seu rendimento, considerando sua responsbailidade como nenhuma");
-    Console.WriteLine("Você é expulso(a) da vila...");
-}
-else
-{
-    Console.WriteLine("Seu pai fica orgulhoso com seu rendimento, comentando que você é muito responsável");
-    Console.WriteLine("Ele define você como novo(a) Líder da vila");
-}
-Console.WriteLine("Agora com seu retorno, a vila poderá se mudar...");
-Console.WriteLine();
-Console.WriteLine("Pressione <Enter> para continuar...");
-//Comandos de finalização do jogo.
-//O código verifica a quantidade final de Recursos do jogador. Se for menor que 700, ele dará o final "ruim" e se houver mais que 700, ele dará o final "bom"
+            if (dia6 == 1)
+            {
+                Console.Clear();
+                Console.WriteLine("Você manda exterminar todos os porcos, restando apenas galinhas agora...");
+                Console.WriteLine("Alguns habitantes não gostaram da sua última decisão...");
+                Recursos -= 12;
+                Revolta++;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Os porcos estavam doentes, muitos que comeram sua carne adoeceram e morreram...");
+                Habitantes -= 14;
+            }
+            //Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
+            //Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
 
-while (Console.ReadKey().Key != ConsoleKey.Enter)
-{
-    Console.WriteLine();
-    Console.Write("Muito engrçadinho(a) você...");
-}
+            Console.WriteLine("SÉTIMO DIA");
+            Console.WriteLine("Recursos:" + Recursos);
+            Console.WriteLine("Habitantes:" + Habitantes);
+            Console.WriteLine();
+            if (Revolta == 3) //Aqui, se o jogador fez 3 escolhas que tenham desagradado os Habitantes, este evento acontecerá
+            {
+                Console.WriteLine("Durante a noite, um grupo de Habitantes fugiu com recursos...");
+                Console.WriteLine();
+                Habitantes -= 10;
+                Recursos -= 400;
+            }
+            Console.WriteLine("Amanhece, a inventora Florinda da vila, diz ter encontrado peças de veículo no lado de fora.");
+            Console.WriteLine("Florinda pede para que você doe recursos para ela construir um veículo de transporte.");
+            Console.WriteLine();
+            Console.WriteLine("O que você faz?");
+            Console.WriteLine("Digite <1> para dar os Recursos e deixá-la construir um veículo");
+            Console.WriteLine("Digite <2> para recusar o pedido");
+            int dia7 = Convert.ToInt32(Console.ReadLine());
 
-Console.Clear();
-Console.WriteLine("SEUS RESULTADOS FINAIS:");
-Console.WriteLine("Quantidade de Recursos finais:" + Recursos);
-Console.WriteLine("Quantidade de Habitantes final:" + Habitantes);
-Console.WriteLine();
-Console.WriteLine("OBRIGADO POR JOGAR!!!");
-Console.WriteLine("Caso deseje jogar novamente, digite <1>, caso contrário digite qualquer outra tecla...");
-int Replay = Convert.ToInt32(Console.ReadLine());
-if (Replay == 1)
-{
-    goto começo;
-    //Usado o goto para fazer o jogo recomeçar
-}
-else
-{
-    return; //Usado o return para caso o jogador queira fechar o jogo
-}
+            if (dia7 == 1)
+            {
+                Console.Clear();
+                Console.WriteLine("Florinda consseguiu construir um veículo, porém, quando foi testá-lo, ele explodiu...");
+                Recursos -= 100;
+                Habitantes -= 1;
+            }
+            else
+            {
+                Console.Clear();
+                //nada acontece
+            }
+            //Todos os comandos acima foram utilizados para descrever o evento que o jogador está passando e suas possíveis decisões
+            //Utilizando os comandos if e else para o console subtrair Recursos ou Habitantes se necessário dependendo da escolha feita pelo jogador
+
+            Console.WriteLine("SEU PAI RETORNOU...");
+            if (Recursos < 700)
+            {
+                Console.WriteLine("Seu pai fica enfurecido com o seu rendimento, considerando sua responsbailidade como nenhuma");
+                Console.WriteLine("Você é expulso(a) da vila...");
+            }
+            else
+            {
+                Console.WriteLine("Seu pai fica orgulhoso com seu rendimento, comentando que você é muito responsável");
+                Console.WriteLine("Ele define você como novo(a) Líder da vila");
+            }
+            Console.WriteLine("Agora com seu retorno, a vila poderá se mudar...");
+            Console.WriteLine();
+            Console.WriteLine("Pressione <Enter> para continuar...");
+            //Comandos de finalização do jogo.
+            //O código verifica a quantidade final de Recursos do jogador. Se for menor que 700, ele dará o final "ruim" e se houver mais que 700, ele dará o final "bom"
+
+            while (Console.ReadKey().Key != ConsoleKey.Enter)
+            {
+                Console.WriteLine();
+                Console.Write("Muito engraçadinho(a) você...");
+            }
+
+            Console.Clear();
+            Console.WriteLine("SEUS RESULTADOS FINAIS:");
+            Console.WriteLine("Quantidade de Recursos finais:" + Recursos);
+            Console.WriteLine("Quantidade de Habitantes final:" + Habitantes);
+            Console.WriteLine();
+            Console.WriteLine("OBRIGADO POR JOGAR!!!");
+            Console.WriteLine("Caso deseje jogar novamente, digite <1>, caso contrário digite qualquer outra tecla...");
+            int Replay = Convert.ToInt32(Console.ReadLine());
+            if (Replay == 1)
+            {
+                return Replay;
+            }
+            else
+            {
+                return 0;
+
+                    //Usado o return para caso o jogador queira fechar o jogo
+            }
+        }  
